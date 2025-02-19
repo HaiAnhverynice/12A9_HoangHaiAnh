@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoang hai anh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="website">
+    <div id="header">
+        <div id="container">
+            <div id="logo">
+                <div class="logodiv"><img class="logo" src="img/hugicon.jpg"></div>
+                <div class="leveldiv"><p class="level">200</p></div>
+                
+            </div>
+            <div id="wordtitle">
+                <p class="wordtitle">黄haikec#2805</p>
+                <p class="onlinestatus">• online</p>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <div class="nav-item">
+            <button class="nav-button"><img class="icon" src="img/collection.png"><br>collection</button>
+            <div class="dropdown-content">
+                <a href="https://cdn.discordapp.com/attachments/1019229756429971578/1341807838355259463/horace-hsu-15-nunubeelump-9.png?ex=67b7576e&is=67b605ee&hm=c4d5aa239ac754aa41a5c04322f76b1bc3211147e9d96bb6fc84db44ea9f7b32&" target="_blank">Nunu and Beelump</a>
+                <a href="https://cdn.discordapp.com/attachments/1019229756429971578/1341807793077882900/nunu_splash_uncentered_4.png?ex=67b75763&is=67b605e3&hm=58be93b897a351d3df04851340d71269129d3ffc78c719226b8bd749e4ae894f&" target="_blank">Nunu and Willump Bot</a>
+                <a href="https://cdn.discordapp.com/attachments/1019229756429971578/1341808522953752707/nunu_splash_uncentered_1.png?ex=67b75811&is=67b60691&hm=da6b7f435a99549dbc8e1f2234c2e0999e05bf69d01b3b26e1003a964c8bb4e0&" target="_blank">Sasquatch Nunu</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <button class="nav-button"><img class="icon" src="img/loot.png"><br>loot</button>
+            <div class="dropdown-content">
+                <a href="hextech.html" target="_blank">Hextech Chests</a>
+                <a href="https://www.leagueoflegends.com/en-gb/champions/nunu/" target="_blank">Champions</a>
+                <a href="https://www.op.gg/summoners/vn/黄haikec-2805" target="_blank">OP.GG</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <button class="nav-button"><img class="icon" src="img/store.png"><br>store</button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Nothing to buy</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <button class="nav-button"><img class="icon" src="img/friends.png"><br>friends</button>
+            <div class="dropdown-content">
+                <a href="https://www.facebook.com/quang.minh.117812" target="_blank">Quang Minh</a>
+                <a href="https://www.facebook.com/taann1903" target="_blank">Xuan Tan</a>
+                <a href="https://www.facebook.com/nhatanh.nguyenquang.31" target="_blank">Nhat Anh</a>
+                <a href="https://www.facebook.com/anh.quang.64364" target="_blank">Quang Anh</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="img/malz.png" alt="malz"></div>
+            <div class="slide"><img src="img/nunu.jpg" alt="nunu"></div>
+            <div class="slide"><img src="img/samira.jpg" alt="samira"></div>
+            <div class="slide"><img src="img/sion.png" alt="sion"></div>
+            <div class="slide"><img src="img/yuumi.jpg" alt="yuumi"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <footer id="footer">
+        <p class="footer"> Hoàng Hải Anh <br> Lớp 12A9</p>
+    </footer>
+    
+    </div>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function moveSlide(step) {
+            index = (index + step + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</body>
+</html>
