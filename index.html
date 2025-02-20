@@ -11,14 +11,18 @@
     <div id="header">
         <div id="container">
             <div id="logo">
-                <div class="logodiv"><img class="logo" src="img/hugicon.jpg"></div>
+                <a href="https://www.facebook.com/HaiAnhnice/" target="_blank" class="logodiv"><img class="logo" src="img/hugicon.jpg"></a>
                 <div class="leveldiv"><p class="level">200</p></div>
                 
             </div>
             <div id="wordtitle">
                 <p class="wordtitle">黄haikec#2805</p>
+                
                 <p class="onlinestatus">• online</p>
+                
             </div>
+            <div id="viewprofile"><p class="viewprofile">• view profile</p></div>
+            
         </div>
     </div>
     <nav class="nav-bar">
@@ -54,19 +58,19 @@
             </div>
         </div>
     </nav>
-    
+    <div class="bigger-slider-container">
     <div class="slider-container">
         <div class="slider">
-            <div class="slide"><img src="img/malz.png" alt="malz"></div>
             <div class="slide"><img src="img/nunu.jpg" alt="nunu"></div>
-            <div class="slide"><img src="img/samira.jpg" alt="samira"></div>
+            <div class="slide"><img src="img/malz.png" alt="malz"></div>
             <div class="slide"><img src="img/sion.png" alt="sion"></div>
             <div class="slide"><img src="img/yuumi.jpg" alt="yuumi"></div>
+            <div class="slide"><img src="img/samira.jpg" alt="samira"></div>
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-    
+    </div>
     <footer id="footer">
         <p class="footer"> Hoàng Hải Anh <br> Lớp 12A9</p>
     </footer>
@@ -85,6 +89,35 @@
         function updateSlider() {
             document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
         }
+
+
+
+
+        document.querySelector(".logo").addEventListener("mouseover", function() {
+        document.querySelector("#wordtitle").style.opacity = "0";
+        document.querySelector("#wordtitle").style.visibility = "hidden";
+        
+
+        });
+
+        document.querySelector(".logo").addEventListener("mouseout", function() {
+        document.querySelector("#wordtitle").style.opacity = "1";
+        document.querySelector("#wordtitle").style.visibility = "visible";
+        
+        });
+        
+
+        document.querySelector(".logo").addEventListener("mouseover", function() {
+        document.querySelector("#viewprofile").style.opacity = "1";
+        document.querySelector("#viewprofile").style.visibility = "visible";
+        
+        
+        });
+
+        document.querySelector(".logo").addEventListener("mouseout", function() {
+        document.querySelector("#viewprofile").style.opacity = "0";
+        document.querySelector("#viewprofile").style.visibility = "hidden";
+        
+        });
     </script>
 </body>
-</html>
